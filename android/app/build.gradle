@@ -144,6 +144,14 @@ android {
         }
     }
     signingConfigs {
+        release {
+            if (project.hasProperty('OTA_UPDATES_UPLOAD_STORE_FILE')) {
+                storeFile file(OTA_UPDATES_UPLOAD_STORE_FILE)
+                storePassword OTA_UPDATES_UPLOAD_STORE_PASSWORD
+                keyAlias OTA_UPDATES_UPLOAD_KEY_ALIAS
+                keyPassword OTA_UPDATES_UPLOAD_KEY_PASSWORD
+            }
+        }
         debug {
             storeFile file('debug.keystore')
             storePassword 'android'
