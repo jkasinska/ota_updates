@@ -25,6 +25,7 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import codePush from 'react-native-code-push';
 
 declare const global: {HermesInternal: null | {}};
 
@@ -115,4 +116,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default codePush(App);
