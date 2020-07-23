@@ -2,5 +2,5 @@
     <string name="app_name">ota_updates</string>
     <string name="appCenterCrashes_whenToSendCrashes" moduleConfig="true" translatable="false">DO_NOT_ASK_JAVASCRIPT</string>
     <string name="appCenterAnalytics_whenToEnableAnalytics" moduleConfig="true" translatable="false">ALWAYS_SEND</string>
-    <string moduleConfig="true" name="CodePushDeploymentKey">oyK72oWNblnfDk4T8cRu9ETM3HrkCrBi-X4Tx</string>
+    <string moduleConfig="true" name="CodePushDeploymentKey">j-g0la1amiVBociWg0GTpFiApVBe3QgeROA8A</string>
 </resources>
