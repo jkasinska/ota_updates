@@ -11,6 +11,10 @@
 #import <FlipperKitReactPlugin/FlipperKitReactPlugin.h>
 #import <FlipperKitUserDefaultsPlugin/FKUserDefaultsPlugin.h>
 #import <SKIOSNetworkPlugin/SKIOSNetworkAdapter.h>
+#import <AppCenterReactNative.h>
+#import <AppCenterReactNativeAnalytics.h>
+#import <AppCenterReactNativeCrashes.h>
+#import <CodePush/CodePush.h>
 
 static void InitializeFlipper(UIApplication *application) {
   FlipperClient *client = [FlipperClient sharedClient];
@@ -51,6 +55,11 @@ static void InitializeFlipper(UIApplication *application) {
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
+
+  [AppCenterReactNative register];
+  [AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];
+  [AppCenterReactNativeCrashes registerWithAutomaticProcessing];
+
   return YES;
 }
 
@@ -60,8 +69,9 @@ static void InitializeFlipper(UIApplication *application) {
       [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index"
                                                      fallbackResource:nil];
 #else
-  return [[NSBundle mainBundle] URLForResource:@"main"
-                                 withExtension:@"jsbundle"];
+//   return [[NSBundle mainBundle] URLForResource:@"main"
+//                                  withExtension:@"jsbundle"];
+    return [CodePush bundleURL];
 #endif
 }
 
