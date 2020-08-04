@@ -116,4 +116,9 @@ const styles = StyleSheet.create({
   },
 });
 
-export default codePush(App);
+const codePushOptions = {
+  updateDialog: true,
+  installMode: codePush.InstallMode.IMMEDIATE,
+  checkFrequency: codePush.CheckFrequency.ON_APP_RESUME
+};
+export default codePush(codePushOptions)(App);
