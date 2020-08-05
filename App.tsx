@@ -98,7 +98,7 @@ class App extends Component<{}, AppState> {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to CodePush! (2)
+          Welcome to CodePush! (4)
         </Text>
         <TouchableOpacity onPress={this.sync.bind(this)}>
           <Text style={styles.syncButton}>Press for background sync</Text>
