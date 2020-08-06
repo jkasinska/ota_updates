@@ -2,9 +2,11 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {NavigationContainer} from '@react-navigation/native';
 import CursorSvg from './assets/cursor.svg';
-import SquareSvg from './assets/square.svg';
+import GithubSvg from './assets/github.svg';
+import UnicornSvg from './assets/unicorn.svg';
 import FirstComponent from './src/components/FirstComponent';
 import SecondComponent from './src/components/SecondComponent';
+import ThirdComponent from './src/components/ThirdComponent';
 
 const Tab = createBottomTabNavigator();
 
@@ -27,14 +29,23 @@ const App = () => {
             ),
           }}
         />
-
         <Tab.Screen
           name="SecondComponent"
           component={SecondComponent}
           options={{
             tabBarLabel: 'SecondComponent',
             tabBarIcon: () => (
-              <SquareSvg height={20} width={20} fill="gray"/>
+              <GithubSvg height={20} width={20} fill="gray"/>
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="ThirdComponent"
+          component={ThirdComponent}
+          options={{
+            tabBarLabel: 'ThirdComponent',
+            tabBarIcon: () => (
+              <UnicornSvg height={20} width={20} fill="gray"/>
             ),
           }}
         />

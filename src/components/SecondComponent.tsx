@@ -26,7 +26,6 @@ const Item = (item: any) => (
   </View>
 );
 
-
 export default () => {
   return (
     <SafeAreaView style={styles.container}>
