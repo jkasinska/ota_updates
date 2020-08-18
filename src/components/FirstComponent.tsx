@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Dimensions, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {Dimensions, StyleSheet, Text, TouchableOpacity, View, Image} from 'react-native';
 import CodePush, {DownloadProgress, LocalPackage, UpdateDialog} from 'react-native-code-push';
 
 interface FirstComponentState {
@@ -15,7 +15,6 @@ class FirstComponent extends Component<{}, FirstComponentState> {
   }
 
   codePushStatusDidChange(syncStatus: CodePush.SyncStatus) {
-    console.log(syncStatus)
     switch(syncStatus) {
       case CodePush.SyncStatus.CHECKING_FOR_UPDATE:
         this.setState({ syncMessage: "Checking for update." });
@@ -97,6 +96,10 @@ class FirstComponent extends Component<{}, FirstComponentState> {
 
     return (
       <View style={styles.container}>
+        <Image
+          style={styles.logo}
+          source={require('../../assets/react-img.png')}
+        />
         <Text style={styles.welcome}>
           Welcome to CodePush! (4)
         </Text>
@@ -156,6 +159,11 @@ const styles = StyleSheet.create({
     fontSize: 15,
     textAlign: "center",
     margin: 20
+  },
+  logo: {
+    resizeMode: "cover",
+    height: 100,
+    width: 200
   }
 });
 
