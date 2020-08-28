@@ -1,11 +1,24 @@
 import React from 'react';
-import { SafeAreaView, View, VirtualizedList, StyleSheet, Text } from 'react-native';
+import {
+  SafeAreaView,
+  View,
+  VirtualizedList,
+  StyleSheet,
+  Text,
+  Button,
+} from 'react-native';
+import { NavigationProp, RouteProp } from '@react-navigation/native';
 
-interface Item {
-  key: number,
-  id: string,
-  title: string
+interface ThirdComponentProps {
+  navigation: NavigationProp<any>;
+  route: RouteProp<any, any>;
 }
+
+type Item = {
+  key: number;
+  id: string;
+  title: string;
+};
 
 const DATA: Item[] = [];
 
@@ -13,15 +26,15 @@ const getItem = (data: Item[], index: number) => {
   return {
     key: index.toString(),
     id: Math.random().toPrecision(2).toString(),
-    title: `Item ${index+1}`
-  }
-}
+    title: `Item ${index + 1}`,
+  };
+};
 
 const getItemCount = () => {
   return 200;
-}
+};
 
-const ThirdComponent = () => {
+const ThirdComponent = (props: ThirdComponentProps) => {
   return (
     <SafeAreaView style={styles.container}>
       <VirtualizedList
@@ -31,8 +44,14 @@ const ThirdComponent = () => {
           return (
             <View style={styles.item}>
               <Text style={styles.title}>{item.title}</Text>
+              <Button
+                title={`Details of ${item.title}`}
+                onPress={() =>
+                  props.navigation.navigate('ThirdComponentDetails', item)
+                }
+              />
             </View>
-          )
+          );
         }}
         keyExtractor={item => item.key}
         getItemCount={getItemCount}
@@ -40,7 +59,7 @@ const ThirdComponent = () => {
       />
     </SafeAreaView>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -48,9 +67,12 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   item: {
+    display: 'flex',
     backgroundColor: '#f9c2ff',
-    height: 150,
-    justifyContent: 'center',
+    flexWrap: 'wrap',
+    alignItems: 'flex-start',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     marginVertical: 8,
     marginHorizontal: 16,
     padding: 20,

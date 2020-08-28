@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FirstComponent should should match the snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#F5FCFF",
+      "flex": 1,
+      "paddingTop": 50,
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "testUri": "../../../assets/react-img.png",
+      }
+    }
+    style={
+      Object {
+        "height": 100,
+        "resizeMode": "cover",
+        "width": 200,
+      }
+    }
+  />
+  <Text>
+    TEST
+  </Text>
+  <Text
+    style={
+      Object {
+        "fontSize": 20,
+        "margin": 20,
+        "textAlign": "center",
+      }
+    }
+  >
+    Welcome to CodePush! (4)
+  </Text>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "green",
+          "fontSize": 17,
+        }
+      }
+    >
+      Press for background sync
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "green",
+          "fontSize": 17,
+        }
+      }
+    >
+      Press for dialog-driven sync
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "blue",
+          "fontSize": 17,
+        }
+      }
+    >
+      Restart 
+      allowed
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "green",
+          "fontSize": 17,
+        }
+      }
+    >
+      Press for Update Metadata
+    </Text>
+  </View>
+  <Text
+    style={
+      Object {
+        "marginTop": 30,
+        "textAlign": "center",
+      }
+    }
+  >
+    
+  </Text>
+  <Text
+    style={
+      Object {
+        "fontSize": 15,
+        "margin": 20,
+        "textAlign": "center",
+      }
+    }
+  >
+    FirstComponent
+  </Text>
+</View>
+`;
