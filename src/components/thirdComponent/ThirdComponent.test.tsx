@@ -25,7 +25,7 @@ describe('ThirdComponent should', () => {
 
     expect(props.navigation.navigate).toHaveBeenCalledTimes(1);
     expect(props.navigation.navigate).toHaveBeenCalledWith(
-      'ThirdComponentDetails',
+      'ThirdComponentDetails123',
       {
         id: expect.toBeString(),
         title: 'Item 1',
